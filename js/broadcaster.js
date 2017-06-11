@@ -1,11 +1,9 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const Subject_1 = require("rxjs/Subject");
-require("rxjs/add/operator/filter");
-require("rxjs/add/operator/map");
-class Broadcaster {
+import { Subject } from 'rxjs/Subject';
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/map';
+export class Broadcaster {
     constructor() {
-        this._eventBus = new Subject_1.Subject();
+        this._eventBus = new Subject();
     }
     broadcast(key, data) {
         this._eventBus.next({ key, data });
@@ -16,5 +14,4 @@ class Broadcaster {
             .map(event => event.data);
     }
 }
-exports.Broadcaster = Broadcaster;
-//# sourceMappingURL=/home/victor/projects/ng2-cable/broadcaster.js.map
+//# sourceMappingURL=/vagrant-ng2-cable/broadcaster.js.map

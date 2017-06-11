@@ -4,7 +4,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "mapRoot": "",
-    "module": "commonjs",
+    "module": "es2015",
     "moduleResolution": "node",
     "noEmitOnError": true,
     "noUnusedParameters": true,
@@ -26,6 +26,7 @@
     "!node_modules/**/*"
   ],
   "exclude": [
+    "./js",
     "node_modules",
     "typings/global",
     "typings/global.d.ts"
