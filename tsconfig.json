@@ -4,7 +4,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "mapRoot": "",
-    "module": "es2015",
+    "module": "commonjs",
     "moduleResolution": "node",
     "noEmitOnError": true,
     "noUnusedParameters": true,

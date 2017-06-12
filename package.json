@@ -10,12 +10,8 @@
     "rxjs": "^5.1.0"
   },
   "devDependencies": {
-    "@angular/animations": "^4.1.0",
-    "@angular/common": "^4.1.0",
-    "@angular/compiler": "^4.1.0",
-    "@angular/compiler-cli": "^4.1.0",
-    "@angular/platform-browser": "^4.1.0",
-    "@angular/platform-server": "^4.1.0",
+    "@angular/compiler": "^4.0.2",
+    "@angular/core": "^4.0.2",
     "typescript": "^2.2.2",
     "zone.js": "^0.8.5"
   },
