@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Subject_1 = require("rxjs/Subject");
+const Rx_1 = require("rxjs/Rx");
 class Broadcaster {
     constructor() {
-        this._eventBus = new Subject_1.Subject();
+        this._eventBus = new Rx_1.Subject();
     }
     broadcast(key, data) {
         this._eventBus.next({ key, data });

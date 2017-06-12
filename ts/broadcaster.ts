@@ -1,5 +1,4 @@
-import { Subject } from 'rxjs/Subject';
-import { Observable } from 'rxjs/Rx';
+import { Subject, Observable } from 'rxjs/Rx';
 
 interface BroadcastEvent {
   key: any;
