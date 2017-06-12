@@ -7,11 +7,11 @@ export class Ng2Cable {
   public cable: any;
   public channels : any = {};
 
-  constructor(url) {
+  constructor(url : string) {
     this.connect(url);
   }
 
-  subscribe(channel) : Broadcaster {
+  subscribe(channel : any) : Broadcaster {
     let channelName = (typeof(channel) === 'object') ? channel['channel'] : channel,
         broadcaster = new Broadcaster(),
         subscription = this.cable.subscriptions.create(channel, {
@@ -26,16 +26,16 @@ export class Ng2Cable {
     return broadcaster;
   }
 
-  unsubscribe(channel) : void {
+  unsubscribe(channel : string) : void {
     let subscription = this.channels[channel].subscription;
     this.cable.subscriptions.remove(subscription);
   }
 
-  perform(channel, action, data) : void {
+  perform(channel : string, action : string, data : any) : void {
     this.channels[channel].subscription.perform(action, data);
   }
 
-  connect(url): any {
+  connect(url : string): any {
     this.cable = ActionCable.createConsumer(url);
     this.cable.connect();
     return this.cable;

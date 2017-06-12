@@ -47,7 +47,7 @@ let Ng2Cable = class Ng2Cable {
 };
 Ng2Cable = __decorate([
     core_1.Injectable(),
-    __metadata("design:paramtypes", [Object])
+    __metadata("design:paramtypes", [String])
 ], Ng2Cable);
 exports.Ng2Cable = Ng2Cable;
 //# sourceMappingURL=/vagrant-ng2-cable/ng2-cable.js.map

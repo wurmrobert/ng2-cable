@@ -2,10 +2,10 @@ import { Broadcaster } from './broadcaster';
 export declare class Ng2Cable {
     cable: any;
     channels: any;
-    constructor(url: any);
+    constructor(url: string);
     subscribe(channel: any): Broadcaster;
-    unsubscribe(channel: any): void;
-    perform(channel: any, action: any, data: any): void;
-    connect(url: any): any;
+    unsubscribe(channel: string): void;
+    perform(channel: string, action: string, data: any): void;
+    connect(url: string): any;
     disconnect(): void;
 }
