@@ -12,9 +12,9 @@ export class Ng2Cable {
   }
 
   subscribe(channel : any) : Broadcaster {
-    let channelName = (typeof(channel) === 'object') ? channel['channel'] : channel,
-        broadcaster = new Broadcaster(),
-        subscription = this.cable.subscriptions.create(channel, {
+    let channelName = (typeof(channel) === 'object') ? channel['channel'] : channel;
+    let broadcaster = new Broadcaster();
+    let subscription = this.cable.subscriptions.create(channel, {
           received: (data) => {
             broadcaster.broadcast((data.action || channel), data);
           }
