@@ -1,6 +1,6 @@
 import { Configuration } from './configuration';
 import { Injectable, Optional } from '@angular/core';
-import * as ActionCable from 'actioncable';
+import ActionCable from 'actioncable';
 import { Broadcaster } from './broadcaster';
 
 @Injectable()
