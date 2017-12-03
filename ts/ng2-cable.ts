@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Configuration } from './configuration';
+import { Injectable, Optional } from '@angular/core';
 import * as ActionCable from 'actioncable';
 import { Broadcaster } from './broadcaster';
 
@@ -7,8 +8,8 @@ export class Ng2Cable {
   public cable: any;
   public channels : any = {};
 
-  constructor(url : string) {
-    this.connect(url);
+  constructor(@Optional() public configuration: Configuration) {
+    this.connect(configuration.url);
   }
 
   subscribe(channel : any, params={}) : Broadcaster {
