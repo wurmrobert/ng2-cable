@@ -6,11 +6,7 @@ interface BroadcastEvent {
 }
 
 export class Broadcaster {
-  private _eventBus: Subject<BroadcastEvent>;
-
-  constructor() {
-    this._eventBus = new Subject<BroadcastEvent>();
-  }
+  private _eventBus = new Subject<BroadcastEvent>();
 
   broadcast(key: any, data?: any) {
     this._eventBus.next({key, data});

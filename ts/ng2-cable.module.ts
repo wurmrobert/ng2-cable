@@ -6,8 +6,7 @@ import { Broadcaster } from './broadcaster';
 @NgModule({
 	imports: [],
 	providers: [
-		Ng2CableService,
-		Broadcaster
+		Ng2CableService
 	]
 })
 export class Ng2CableModule {

@@ -1,7 +1,7 @@
 import { Configuration } from './configuration';
 import { Broadcaster } from './broadcaster';
 export declare class Ng2CableService {
-    configuration: Configuration;
+    readonly configuration: Configuration;
     cable: any;
     channels: any;
     constructor(configuration: Configuration);
