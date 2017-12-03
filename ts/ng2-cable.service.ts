@@ -31,8 +31,12 @@ export class Ng2CableService {
 	}
 
 	unsubscribe(channel: string): void {
-		let subscription = this.channels[channel].subscription;
-		this.cable.subscriptions.remove(subscription);
+		if(!this.channels[channel].subscription) {
+			console.info(`No Subscription for Channel ${channel} found!`);
+		} else {
+			let subscription = this.channels[channel].subscription;
+			this.cable.subscriptions.remove(subscription);
+		}
 	}
 
 	perform(channel: string, action: string, data: any): void {

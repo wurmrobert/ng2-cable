@@ -65,8 +65,13 @@ var Ng2CableService = /** @class */ (function () {
         return broadcaster;
     };
     Ng2CableService.prototype.unsubscribe = function (channel) {
-        var subscription = this.channels[channel].subscription;
-        this.cable.subscriptions.remove(subscription);
+        if (!this.channels[channel].subscription) {
+            console.info("No Subscription for Channel " + channel + " found!");
+        }
+        else {
+            var subscription = this.channels[channel].subscription;
+            this.cable.subscriptions.remove(subscription);
+        }
     };
     Ng2CableService.prototype.perform = function (channel, action, data) {
         this.channels[channel].subscription.perform(action, data);
