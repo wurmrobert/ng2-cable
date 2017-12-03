@@ -12,15 +12,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var ActionCable = require("actioncable");
 var broadcaster_1 = require("./broadcaster");
-var Ng2Cable = (function () {
+var Ng2Cable = /** @class */ (function () {
     function Ng2Cable(url) {
         this.channels = {};
         this.connect(url);
     }
-    Ng2Cable.prototype.subscribe = function (channel) {
+    Ng2Cable.prototype.subscribe = function (channel, params) {
+        if (params === void 0) { params = {}; }
         var channelName = (typeof (channel) === 'object') ? channel['channel'] : channel;
+        var subscriptionParams = Object.assign({ channel: channel }, params);
         var broadcaster = new broadcaster_1.Broadcaster();
-        var subscription = this.cable.subscriptions.create(channel, {
+        var subscription = this.cable.subscriptions.create(subscriptionParams, {
             received: function (data) {
                 broadcaster.broadcast((data.action || channel), data);
             }
@@ -46,11 +48,11 @@ var Ng2Cable = (function () {
     Ng2Cable.prototype.disconnect = function () {
         this.cable.disconnect();
     };
+    Ng2Cable = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [String])
+    ], Ng2Cable);
     return Ng2Cable;
 }());
-Ng2Cable = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [String])
-], Ng2Cable);
 exports.Ng2Cable = Ng2Cable;
-//# sourceMappingURL=/vagrant-ng2-cable/ng2-cable.js.map
+//# sourceMappingURL=/Users/robertwurm/Documents/EasySolutions/GitHub/ng2-cable/ng2-cable.js.map

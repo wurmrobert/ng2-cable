@@ -5,4 +5,4 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./broadcaster"));
 __export(require("./ng2-cable"));
-//# sourceMappingURL=/vagrant-ng2-cable/index.js.map
+//# sourceMappingURL=/Users/robertwurm/Documents/EasySolutions/GitHub/ng2-cable/index.js.map

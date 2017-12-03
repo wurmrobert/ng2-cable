@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var Rx_1 = require("rxjs/Rx");
-var Broadcaster = (function () {
+var Broadcaster = /** @class */ (function () {
     function Broadcaster() {
         this._eventBus = new Rx_1.Subject();
     }
@@ -16,4 +16,4 @@ var Broadcaster = (function () {
     return Broadcaster;
 }());
 exports.Broadcaster = Broadcaster;
-//# sourceMappingURL=/vagrant-ng2-cable/broadcaster.js.map
+//# sourceMappingURL=/Users/robertwurm/Documents/EasySolutions/GitHub/ng2-cable/broadcaster.js.map
