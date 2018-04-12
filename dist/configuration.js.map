@@ -1,0 +1,1 @@
+{"version":3,"file":"configuration.js","sourceRoot":"","sources":["../src/configuration.ts"],"names":[],"mappings":"AAAA;IACI,uBAAmB,GAAW;QAAX,QAAG,GAAH,GAAG,CAAQ;IAAG,CAAC;IACtC,oBAAC;AAAD,CAAC,AAFD,IAEC","sourcesContent":["export class Configuration {\n    constructor(public url: string) {}\n}\ninterface DecoratorInvocation {\n  type: Function;\n  args?: any[];\n}\n"]}
