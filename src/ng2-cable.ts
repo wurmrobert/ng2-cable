@@ -1,7 +1,7 @@
+import * as ActionCable from 'actioncable';
 import { Configuration } from './configuration';
 import { Injectable, Optional } from '@angular/core';
 import { Broadcaster } from './broadcaster';
-var ActionCable = require('actioncable')
 
 @Injectable()
 export class Ng2CableService {
@@ -17,7 +17,7 @@ export class Ng2CableService {
 		let subscriptionParams = Object.assign({ channel: channel }, params);
 		var broadcaster = new Broadcaster();
 		let subscription = this.cable.subscriptions.create(subscriptionParams, {
-			received: (data) => {
+			received: (data: any) => {
 				broadcaster.broadcast(data.action, data);
 			}
 		});
