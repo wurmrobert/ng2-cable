@@ -32,7 +32,7 @@ export class Ng2CableService {
 
 	unsubscribe(channel: string): void {
 		if(!this.channels[channel].subscription) {
-			console.error(`Unable to unsubscribe channel with name ${channel} from ng2-cable!`);
+			console.info(`No Subscription for Channel ${channel} found!`);
 		} else {
 			let subscription = this.channels[channel].subscription;
 			this.cable.subscriptions.remove(subscription);
