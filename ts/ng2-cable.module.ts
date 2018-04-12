@@ -1,6 +1,6 @@
 import { Configuration } from './configuration';
 import { NgModule, ModuleWithProviders } from '@angular/core';
-import { Ng2CableService } from './ng2-cable';
+import { Ng2CableService } from './ng2-cable.service';
 import { Broadcaster } from './broadcaster';
 
 @NgModule({

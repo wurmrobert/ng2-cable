@@ -1,10 +1,21 @@
 {
   "name": "ng2-cable",
-  "version": "2.0.6",
-  "description": "Easily integrate Rails' ActionCable into your Angular2/4/ionic2/3 application.",
-  "main": "bundles/ng2-cable.umd.min.js",
-  "module": "index.js",
-  "typings": "index.d.ts",
+  "version": "1.1.3",
+  "description": "Easily integrate Rails' ActionCable into your Angular2/4/ionic2 application.",
+  "main": "dist/ng2-cable.umd.js",
+  "jsnext:main": "dist/ng2-cable.esm.js",
+  "module": "dist/ng2-cable.esm.js",
+  "types": "dist/ng2-cable.d.ts",
+  "typings": "dist/ng2-cable.d.ts",
+  "dependencies": {
+    "@angular/core": "^5.0.0",
+    "@angular/common": "^5.0.0",
+    "actioncable": "^5.0.0",
+    "rxjs": "^5.5.0"
+  },
+  "typescript": {
+    "definition": "./js/index.d.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/viktor-shmigol/ng2-cable.git"
@@ -13,7 +24,6 @@
     "cable",
     "ActionCable",
     "Angular2-cable",
-    "Angular4-cable",
     "ng2-cable",
     "ng2Cable",
     "Rails",
@@ -22,9 +32,7 @@
     "Angular2",
     "Angular4",
     "ionic2",
-    "ionic3",
     "ionic2-cable",
-    "ionic3-cable",
     "Rails5",
     "Action Cable"
   ],
@@ -32,16 +40,6 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/viktor-shmigol/ng2-cable/issues"
-  },
-  "dependencies": {
-    "@types/actioncable": "0.0.2",
-    "actioncable": "5.1.2"
-  },
-  "peerDependencies": {
-    "@angular/core": "^2.4.0",
-    "reflect-metadata": "^0.1.8",
-    "rxjs": "^5.0.1",
-    "zone.js": "^0.7.2"
   },
   "homepage": "https://github.com/viktor-shmigol/ng2-cable#readme"
 }
